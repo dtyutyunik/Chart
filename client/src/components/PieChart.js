@@ -39,16 +39,14 @@ export default function PieChart(props){
 
         <Pie
         data={{ labels: [
-      		'Savings',
       		'Expenses',
-      		'Balance'
+      		'Savings'
       	],
         datasets:[{
-          data: [props.savings,expense,balance],
+          data: [expense,balance],
           backgroundColor: [
-      		'green',
       		'red',
-      		'black'
+      		'green',
       		],
         }],
         }

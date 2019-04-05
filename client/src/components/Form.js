@@ -4,9 +4,11 @@ export default function Form(props){
   const {data}=props;
 
   return(
-    <div>
+    <div className='Savings'>
 
-    {!!props.savings?<form onSubmit={props.onSubmit}>
+    {!!props.savings?<div>
+      <h2>Step 1 Enter Your Monthly Income</h2>
+      <form onSubmit={props.onSubmit}>
     <label>
     Enter Monthly Income
       <input type='text'
@@ -17,11 +19,8 @@ export default function Form(props){
       />
       </label>
       <button type='submit'>Enter</button>
-
-
-    </form>:null}
-
-    total is {props.data}
+    </form>
+    </div>:null}
     </div>
   )
 }

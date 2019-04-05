@@ -3,9 +3,17 @@
 }
 
 .expenseForm{
-  border: 1px solid black;
+  border: 3px solid yellow;
 }
 
 .barChart{
   border: 1px solid purple;
+}
+
+.Savings{
+  box-shadow: 10px 10px 42px 0px rgba(0,0,0,0.75);
+}
+
+span{
+  font-size: 2em;
 }

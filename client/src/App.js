@@ -6,6 +6,7 @@ import PieChart from './components/PieChart';
 import Form from './components/Form';
 import Expenses from './components/Expenses';
 import ExpenseForm from './components/ExpenseForm';
+import Typist from 'react-typist';
 
 
 class App extends Component {
@@ -31,26 +32,14 @@ class App extends Component {
         },
       ],
       expenses:
+
         {
           name: '',
           amount: '',
         },
-
-
     }
 
   }
-
-
-  // this.setState(prevState => ({
-  //    ...prevState,
-  //         preferences: {
-  //             ...prevState.preferences,
-  //             [key]: newValue
-  //         }
-  // }));
-
-
 
   handleChange=(e)=>{
 
@@ -92,28 +81,47 @@ handleSavings=(e)=>{
 
   }
 
+  removeExpense=(e)=>{
+    console.log(e);
+
+    this.setState({
+      expensesList: this.state.expensesList.filter((item,index)=>(index!==e))
+    })
+  }
+
 
   render() {
     return (
       <div className="App">
 
-      <Form
+         <Typist
+          cursor={{
+           show: false,
+           hideWhenDone: true}}
+           >
+         <span> Financial Calculator  </span>
+         <Typist.Backspace count={9} delay={400} />
+        <span> Phrase </span>
+         </Typist>
+        <Form
         data={this.state.savings}
         onChange={this.handleChange}
         onSubmit={this.handleSavings}
         savings={this.state.savingsEntered}
-
         />
 
-        <ExpenseForm
+        {!this.state.savingsEntered?<ExpenseForm
         data={this.state.expenses}
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}
-        />
+        />:null}
 
-        <BarChart data={this.state.expensesList}/>
-        <PieChart savings={this.state.savings}
-              expenses={this.state.expensesList}/>
+        {!this.state.savingsEntered?<Expenses data={this.state.expensesList}
+          remove={this.removeExpense}
+        />:null}
+      {!this.state.savingsEntered?  <BarChart data={this.state.expensesList}/>:null}
+      {!this.state.savingsEntered?  <PieChart savings={this.state.savings}
+              expenses={this.state.expensesList}/>:null}
 
 
 

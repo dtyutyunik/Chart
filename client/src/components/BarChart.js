@@ -25,6 +25,7 @@ export default function BarChart(props){
          {labels: labels,
         	datasets: [{
           	data: info,
+						label: 'Expenses',
           	backgroundColor: colors,
 						hoverBackgroundColor: 'red'
         }],
