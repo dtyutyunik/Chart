@@ -18,18 +18,18 @@ class App extends Component {
         savingsEntered: true,
 
       expensesList: [
-        {
-          name: 'food',
-          amount: 200,
-        },
-        {
-          name: 'internet',
-          amount: 100,
-        },
-        {
-          name: 'rent',
-          amount: 800,
-        },
+        // {
+        //   name: 'food',
+        //   amount: 200,
+        // },
+        // {
+        //   name: 'internet',
+        //   amount: 100,
+        // },
+        // {
+        //   name: 'rent',
+        //   amount: 800,
+        // },
       ],
       expenses:
 
@@ -99,9 +99,11 @@ handleSavings=(e)=>{
            show: false,
            hideWhenDone: true}}
            >
-         <span> Financial Calculator  </span>
-         <Typist.Backspace count={9} delay={400} />
-        <span> Phrase </span>
+         <span>Calculate Your Savings</span>
+         <Typist.Backspace count={7} delay={600} />
+        <span>Expenses</span>
+        <Typist.Backspace count={8} delay={600} />
+        <span>Financials</span>
          </Typist>
         <Form
         data={this.state.savings}
@@ -110,6 +112,7 @@ handleSavings=(e)=>{
         savings={this.state.savingsEntered}
         />
 
+        <div className="expenseContainer">
         {!this.state.savingsEntered?<ExpenseForm
         data={this.state.expenses}
         onChange={this.handleChange}
@@ -119,9 +122,12 @@ handleSavings=(e)=>{
         {!this.state.savingsEntered?<Expenses data={this.state.expensesList}
           remove={this.removeExpense}
         />:null}
+        </div>
+        <div className='charts'>
       {!this.state.savingsEntered?  <BarChart data={this.state.expensesList}/>:null}
       {!this.state.savingsEntered?  <PieChart savings={this.state.savings}
               expenses={this.state.expensesList}/>:null}
+              </div>
 
 
 

@@ -2,18 +2,78 @@
   text-align: center;
 }
 
-.expenseForm{
-  border: 3px solid yellow;
+.barChart{
+  box-shadow: 10px 10px 42px 0px rgba(0,0,0,0.75);
 }
 
-.barChart{
-  border: 1px solid purple;
+.pieChart{
+  box-shadow: 10px 10px 42px 0px rgba(0,0,0,0.75);
+  margin-left: 5%;
+  height: auto;
 }
 
 .Savings{
   box-shadow: 10px 10px 42px 0px rgba(0,0,0,0.75);
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.form {
+
+
+}
+.form > label{
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+
+.expenseForm{
+  box-shadow: 10px 10px 42px 0px rgba(0,0,0,0.75);
+  width: 400px;
+  height: 200px;
+  /* margin: 0 auto; */
+
+}
+
+.expenseList{
+  box-shadow: 10px 10px 42px 0px rgba(0,0,0,0.75);
+  width: 400px;
+  height: 200px;
+}
+
+.expenseContainer{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.charts{
+  display: flex;
+  justify-content: center;
+}
+
+.expenseButton{
+  font-size: .3em;
 }
 
 span{
   font-size: 2em;
+}
+
+input{
+  font-size: 1.1em;
+}
+button{
+  font-size: 1.1em;
+}
+
+label{
+  font-size: 1.1em;
+
 }

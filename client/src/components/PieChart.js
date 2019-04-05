@@ -32,11 +32,7 @@ export default function PieChart(props){
   let balance=props.savings-expense;
 
     return(
-      <div>
-        <p>savings is {props.savings}</p>
-      <p>  expenses is {expense}</p>
-        <p>balalnce is {balance}</p>
-
+      <div className='pieChart'>
         <Pie
         data={{ labels: [
       		'Expenses',
