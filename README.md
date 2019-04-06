@@ -9,4 +9,4 @@ Video showcasing the app (https://youtu.be/oByVe7_O9ts)
 
 ## Website
 
-Hosted on (financial_calc.surge.sh)
+Hosted on http://financial_calc.surge.sh/
