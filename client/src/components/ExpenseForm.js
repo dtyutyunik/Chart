@@ -4,7 +4,7 @@ export default function ExpenseForm(props){
 
   return(
     <div className='expenseForm'>
-      <h2>Enter Expenses</h2>
+      <h2>Enter Monthly Expenses</h2>
         <form onSubmit={props.onSubmit}>
         <div className='form'>
         <label>

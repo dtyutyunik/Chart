@@ -3,7 +3,7 @@ import React from 'react';
 export default function Expenses(props){
 return(
   <div className="expenseList">
-    <h2>Expense BreakDown</h2>
+    <h2>Monthly Expense BreakDown</h2>
     {props.data.map((i,position)=>{
       return(
         <div key={position}>
