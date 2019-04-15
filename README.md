@@ -11,6 +11,4 @@ Video showcasing the app (https://youtu.be/oByVe7_O9ts)
 
 Hosted on http://financial_calc.surge.sh/
 
-## Youtube
 
-https://youtu.be/oByVe7_O9ts
